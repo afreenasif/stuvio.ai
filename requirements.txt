@@ -1,10 +1,5 @@
 python-dotenv
 flask 
-google-generativeai 
-nltk 
-numpy 
-spacy 
+google-generativeai  
 gtts 
 moviepy 
-pydub 
-pillow
