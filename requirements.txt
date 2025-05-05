@@ -2,4 +2,4 @@ python-dotenv
 flask 
 google-generativeai  
 gtts 
-moviepy 
+moviepy==1.0.3
