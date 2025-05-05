@@ -1,0 +1,10 @@
+python-dotenv
+flask 
+google-generativeai 
+nltk 
+numpy 
+spacy 
+gtts 
+moviepy 
+pydub 
+pillow

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>STUVIO.AI</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+  <h1>STUVIO.AI</h1>
+
+  <div class="prompt-container">
+    <form method="POST" action="/generate">
+      <label for="prompt">Enter your prompt</label>
+      <input
+        type="text"
+        id="prompt"
+        name="prompt"
+        placeholder="e.g. Explain black holes in simple terms"
+        required
+      >
+      <button type="submit">Generate</button>
+    </form>
+  </div>
+
+  {% if video_url %}
+  <div class="video-container">
+    <h5>🎥 Generated Video</h5>
+    <video width="60%" height="auto" controls>
+      <source src="{{ video_url }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  {% endif %}
+
+  {% if quiz %}
+  <div class="quiz-container">
+    <h5>🧠 Quiz Based on Topic</h5>
+    <pre>{{ quiz }}</pre>
+  </div>
+  {% endif %}
+
+</body>
+</html>
